@@ -200,3 +200,4 @@ hideAlmostDue: true
 filterUsers: 1,2
 filterCategories: 3,4,5
 ```
+
