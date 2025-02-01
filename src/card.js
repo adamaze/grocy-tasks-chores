@@ -36,6 +36,7 @@ export class GrocyTasksChoresCard extends LitElement {
     _dueDays;
     _texts;
     _userId;
+    _CategoryId;
     _hideNotDue;
     _hideAlmostDue;
     _hideDue;
@@ -125,6 +126,7 @@ export class GrocyTasksChoresCard extends LitElement {
         this._almostDueDays = config.almostDueDays ?? 3;
         this._dueDays = config.dueDays ?? 0;
         this._userId = config.userId ?? 0;
+        this._CatogeryId = config.CategoryId ?? 0;
         this._hideNotDue = config.hideNotDue ?? false;
         this._hideAlmostDue = config.hideAlmostDue ?? false;
         this._hideDue = config.hideDue ?? false;
@@ -377,7 +379,7 @@ export class GrocyTasksChoresCard extends LitElement {
             || this._hideAlmostDue && dueClass === 'almostDue'
             || this._hideDue && dueClass === 'due'
             || this._filterUsers && this._filterUsers.indexOf(userId) === -1
-            || this._filterCategories && this._filterCategories.indexOf(userId) === -1
+            || this._filterCategories && this._filterCategories.indexOf(CategoryId) === -1
     }
 
     _processUser(user) {
