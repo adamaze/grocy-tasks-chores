@@ -40,6 +40,7 @@ export class GrocyTasksChoresCard extends LitElement {
     _hideAlmostDue;
     _hideDue;
     _filterUsers;
+    _filterCategories;
     _tappedTasks = {
         chore: [],
         task: []
@@ -128,6 +129,7 @@ export class GrocyTasksChoresCard extends LitElement {
         this._hideAlmostDue = config.hideAlmostDue ?? false;
         this._hideDue = config.hideDue ?? false;
         this._filterUsers = config.filterUsers ? config.filterUsers.split(',').map(Number) : null;
+        this._filterCategories = config.filterCategories ? config.filterCategories.split(',').map(Number) : null;
 
         if (config.locale) {
             LuxonSettings.defaultLocale = config.locale;
@@ -375,6 +377,7 @@ export class GrocyTasksChoresCard extends LitElement {
             || this._hideAlmostDue && dueClass === 'almostDue'
             || this._hideDue && dueClass === 'due'
             || this._filterUsers && this._filterUsers.indexOf(userId) === -1
+            || this._filterCategories && this._filterCategories.indexOf(userId) === -1
     }
 
     _processUser(user) {

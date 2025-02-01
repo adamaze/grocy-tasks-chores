@@ -92,6 +92,7 @@ Custom Home Assistant card for displaying tasks and chores from Grocy. This card
 | `hideAlmostDue`     | boolean | false                | true \| false                                                                      | Hide tasks and chores that are almost due                               | 1.0.0   |
 | `hideDue`           | boolean | false                | true \| false                                                                      | Hide tasks and chores that are due                                      | 1.0.0   |
 | `filterUsers`       | string  | optional             | Comma separated list of integer numbers                                            | Only show tasks and chores assigned to these user id's                  | 1.0.0   |
+| `filterCategories`  | string  | optional             | Comma separated list of integer numbers                                            | Only show tasks in these category id's                                  | 1.0.0   |
 | `texts`             | object  | optional             | See [Texts](#texts)                                                                | Override texts                                                          | 1.0.0   |
 
 ### Entities
@@ -197,4 +198,5 @@ entity:
 hideNotDue: true
 hideAlmostDue: true
 filterUsers: 1,2
+filterCategories: 3,4
 ```
