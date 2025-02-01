@@ -320,7 +320,7 @@ export class GrocyTasksChoresCard extends LitElement {
 
             const dueClass = this._getDueClass(task.due_date);
             const user = this._processUser(task.assigned_to_user);
-            if (this._isFiltered(dueClass, user.id ?? 0)) {
+            if (this._isFiltered(dueClass, user.id, task.category ?? 0)) {
                 return;
             }
 
@@ -372,12 +372,12 @@ export class GrocyTasksChoresCard extends LitElement {
         return processedChores;
     }
 
-    _isFiltered(dueClass, userId) {
+    _isFiltered(dueClass, userId, categoryId) {
         return this._hideNotDue && dueClass === null
             || this._hideAlmostDue && dueClass === 'almostDue'
             || this._hideDue && dueClass === 'due'
             || this._filterUsers && this._filterUsers.indexOf(userId) === -1
-            || this._filterCategories && this._filterCategories.indexOf(userId) === -1
+            || this._filterCategories && this._filterCategories.indexOf(categoryId) === -1
     }
 
     _processUser(user) {
