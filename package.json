@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adamaze/grocy-tasks-chores.git"
+    "url": "git+https://github.com/FamousWolf/grocy-tasks-chores.git"
   },
   "keywords": [
     "lovelace"
@@ -24,9 +24,9 @@
   "author": "Rudy Gnodde",
   "licence": "MIT",
   "bugs": {
-    "url": "https://github.com/adamaze/grocy-tasks-chores/issues"
+    "url": "https://github.com/FamousWolf/grocy-tasks-chores/issues"
   },
-  "homepage": "https://github.com/adamaze/grocy-tasks-chores",
+  "homepage": "https://github.com/FamousWolf/grocy-tasks-chores",
   "devDependencies": {
     "parcel": "^2.11.0"
   },
