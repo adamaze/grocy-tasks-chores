@@ -503,7 +503,7 @@ export class GrocyTasksChoresCard extends LitElement {
                     target: {},
                     data: {
                         chore_id: id,
-                        done_by: this._userId
+                        done_by: this._userId,
                         track_execution_now: this._trackExecutionNow
                     }
                 }
