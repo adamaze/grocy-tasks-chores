@@ -128,6 +128,12 @@ export class GrocyTasksChoresCardEditor extends LitElement {
                     `
                 )}
                 ${this.addExpansionPanel(
+                    'Chore execution',
+                    html`
+                        ${this.addBooleanField('trackExecutionNow', 'Track execution now', false)}
+                    `
+                )}
+                ${this.addExpansionPanel(
                     'Override texts',
                     html`
                         ${this.addTextField('texts.due', 'Due date label')}

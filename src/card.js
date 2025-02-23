@@ -41,6 +41,7 @@ export class GrocyTasksChoresCard extends LitElement {
     _hideDue;
     _filterUsers;
     _filterTaskCategories;
+    _trackExecutionNow;
     _tappedTasks = {
         chore: [],
         task: []
@@ -128,6 +129,7 @@ export class GrocyTasksChoresCard extends LitElement {
         this._hideNotDue = config.hideNotDue ?? false;
         this._hideAlmostDue = config.hideAlmostDue ?? false;
         this._hideDue = config.hideDue ?? false;
+        this._trackExecutionNow = config.hideDue ?? true;
         this._filterUsers = config.filterUsers ? String(config.filterUsers).split(',').map(Number) : null;
         this._filterTaskCategories = config.filterTaskCategories ? String(config.filterTaskCategories).split(',').map(Number) : null;
 
@@ -502,6 +504,7 @@ export class GrocyTasksChoresCard extends LitElement {
                     data: {
                         chore_id: id,
                         done_by: this._userId
+                        track_execution_now: this._trackExecutionNow
                     }
                 }
             }
